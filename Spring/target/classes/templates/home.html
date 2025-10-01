@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerGO | Discover Your Dream Career</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="min-h-screen bg-white">
+    <div th:replace="fragments/header :: header"></div>
+    
+    <section class="hero-section">
+        <div class="background-effects"></div>
+
+        <div class="relative container mx-auto px-6 hero-content-wrapper">
+            <div class="hero-left-content">
+                
+                <div class="tag-pill-wrapper">
+                    <div class="green-dot animate-pulse"></div>
+                    <span class="text-sm text-gray-700">AI-Powered Career Intelligence</span>
+                </div>
+                
+                <h1 class="main-headline">
+                    Discover Your
+                    <span class="gradient-text-block">Dream Career</span>
+                </h1>
+                
+                <p class="tagline-text">
+                    Get personalized career recommendations powered by advanced AI. 
+                    Transform your skills and interests into your perfect career path.
+                </p>
+                
+                <div class="feature-pills-wrapper">
+                    <div class="feature-pill">
+                        <div class="feature-dot bg-green"></div>
+                        <span>95% Success Rate</span>
+                    </div>
+                    <div class="feature-pill">
+                        <div class="feature-dot bg-blue"></div>
+                        <span>Precision Matching</span>
+                    </div>
+                    <div class="feature-pill">
+                        <div class="feature-dot bg-purple"></div>
+                        <span>Instant Results</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar">RH</div>
+                        <div>
+                            <p class="name">Rijaul Haque</p>
+                            <p class="title">Software Engineer</p>
+                        </div>
+                    </div>
+                    <p class="quote">
+                        "CareerGO helped me transition from web development to AI engineering. 
+                        The recommendations were spot-on!"
+                    </p>
+                </div>
+            </div>
+            
+            <div class="flex-1 w-full max-w-lg form-wrapper">
+                <div class="career-form-card">
+                    <h2 class="form-title">Get Your Personalized Career Roadmap</h2>
+                    <form id="career-form">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="skills">Skills:</label>
+                        <textarea id="skills" name="skills" rows="2" required></textarea>
+
+                        <label for="interests">Interests:</label>
+                        <textarea id="interests" name="interests" rows="2" required></textarea>
+
+                        <label for="goal">Career Goal:</label>
+                        <textarea id="goal" name="goal" rows="2" required></textarea>
+
+                        <button type="submit" class="submit-button">Get Recommendation</button>
+                    </form>
+                </div>
+                
+                <div id="result" class="result-box hidden">
+                    <h3>Recommendation Result:</h3>
+                    <pre id="recommendation-text"></pre>
+                    <button id="download-pdf-btn">Download as PDF</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div th:replace="fragments/footer :: footer"></div>
+
+    <script th:src="@{/js/main.js}"></script>
+</body>
+</html>

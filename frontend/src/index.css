@@ -1,0 +1,10 @@
+/* CareerGO/frontend/src/index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add any global custom styles below the directives */
+body {
+    font-family: 'Poppins', sans-serif;
+}

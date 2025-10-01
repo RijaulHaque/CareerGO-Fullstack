@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+    <header th:fragment="header">
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Career<span>GO</span></h1>
+            </div>
+
+            <nav class="nav-links">
+                <a href="/" class="nav-item">Home</a>
+                <a href="#career-form" class="nav-item">Recommend</a>
+                <a href="#" class="nav-item">About</a>
+                <a href="#" class="nav-item">Contact</a>
+            </nav>
+
+            <div class="auth-buttons-header">
+                <button class="btn btn-outline" onclick="alert('Login coming soon!')">Login</button>
+                <button class="btn btn-green" onclick="alert('Signup coming soon!')">Signup</button>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

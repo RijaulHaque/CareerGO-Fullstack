@@ -1,0 +1,195 @@
+/* filepath: d:\7th Sem\JAVA\Mini Project\CareerGO\Spring\CareerGO\src\main\resources\static\css\style.css */
+
+/* --- Variable Definitions --- */
+:root {
+    --color-blue-600: #2563eb;
+    --color-purple-600: #9333ea;
+    --color-pink-600: #db2777;
+    --color-green-500: #10b981;
+    --color-gray-600: #4b5563;
+    --color-gray-700: #374151;
+    --color-gray-800: #1f2937;
+    --color-white: #ffffff;
+    --spacing-xs: 0.5rem; /* 8px - p-2 */
+    --spacing-sm: 1rem;   /* 16px - p-4 */
+    --spacing-md: 1.5rem;  /* 24px - p-6 */
+    --spacing-lg: 2.5rem;  /* 40px - p-10 */
+}
+
+/* --- Base/Layout --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-gray-700);
+    min-height: 100vh;
+    background-color: var(--color-white);
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+}
+
+/* --- Hero Section Styles (Replica of TSX Layout) --- */
+.hero-section {
+    position: relative;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.background-effects {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 */
+    background: linear-gradient(to bottom right, #eff6ff, #f3e8ff, #fce7f3);
+    z-index: 0;
+}
+
+.hero-content-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Stacked on mobile */
+    align-items: center;
+    gap: 4rem;
+    min-height: calc(100vh - 6rem);
+}
+
+@media (min-width: 1024px) { /* lg:flex-row */
+    .hero-content-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+}
+
+/* --- Left Content --- */
+.hero-left-content {
+    flex: 1; /* flex-1 */
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 1024px) {
+    .hero-left-content {
+        text-align: left;
+    }
+}
+
+.tag-pill-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px; /* rounded-full */
+    border: 1px solid rgba(199, 210, 254, 0.5);
+    margin-bottom: 2rem;
+}
+
+.main-headline {
+    font-size: 3rem; /* text-5xl */
+    line-height: 1.1;
+    font-weight: 800; /* font-bold */
+    margin-bottom: 1.5rem;
+    color: var(--color-gray-800);
+}
+
+@media (min-width: 1024px) {
+    .main-headline {
+        font-size: 4.5rem; /* lg:text-7xl */
+    }
+}
+
+/* Gradient Text Effect (Crucial Conversion) */
+.gradient-text-block {
+    display: block;
+    /* bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 */
+    background: linear-gradient(to right, var(--color-blue-600), var(--color-purple-600), var(--color-pink-600));
+    /* bg-clip-text text-transparent */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* --- Right Content (Form) --- */
+.form-wrapper {
+    flex: 1; /* flex-1 */
+    width: 100%;
+    max-width: 450px;
+}
+
+.career-form-card {
+    background-color: var(--color-white);
+    padding: 2rem; /* p-8 */
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+    border: 1px solid #e5e7eb; /* border border-gray-200 */
+}
+
+/* Form inputs and button styles here (based on previous submissions) */
+input[type="text"], 
+textarea {
+    width: 100%;
+    padding: 0.75rem; /* p-3 */
+    margin-bottom: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+}
+
+.submit-button {
+    /* bg-gradient-to-r from-blue-600 to-purple-600 */
+    background: linear-gradient(to right, var(--color-blue-600), var(--color-purple-600));
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px; /* rounded-full */
+    font-weight: 600;
+    width: 100%;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+/* --- Testimonial and Pills Styles --- */
+.testimonial-card {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    max-width: 24rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+/* Add other utility styles for pins, dots, etc. */
+.feature-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 9999px;
+}
+
+.bg-green-500 { background-color: var(--color-green-500); }
+.bg-blue-500 { background-color: var(--color-blue-600); }
+.bg-purple-500 { background-color: var(--color-purple-600); }
+
+/* --- Footer --- */
+footer {
+    background-color: #1f2937;
+    color: white;
+    padding: 3rem 1.5rem;
+    text-align: center;
+}

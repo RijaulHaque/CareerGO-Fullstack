@@ -1,0 +1,49 @@
+# ------------------------------------------------
+# --- MASTER IGNORE FILE FOR CAREERGO FULL-STACK ---
+# ------------------------------------------------
+
+# --- 1. JAVA/SPRING BOOT BUILD ARTIFACTS ---
+# Compiled Output Directories (Must be ignored)
+/target/
+/build/
+/out/
+
+# General Java Files
+*.class
+*.jar
+*.war
+*.ear
+*.log
+*.lock
+
+# Gradle Specific
+.gradle
+!gradle/wrapper/gradle-wrapper.jar
+HELP.md
+
+# --- 2. FRONTEND (NODE/VITE/REACT) ARTIFACTS ---
+# Dependency Folders
+/frontend/node_modules
+/node_modules
+# Vite/Build Output
+/frontend/dist
+/frontend/.vite/
+/dist/
+
+# Configuration Lock Files
+package-lock.json
+yarn.lock
+npm-debug.log*
+
+# --- 3. IDE & ENVIRONMENT ---
+.idea
+.vscode/
+*.iml
+.DS_Store
+
+# --- 4. SECRETS AND SENSITIVE FILES ---
+# This ignores all files named *.properties IF they are in the root of the project.
+# Since your API key is configured in the source, we only ignore the external environment file.
+.env
+.env.local
+.env.*.local
